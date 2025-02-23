@@ -9,7 +9,7 @@ import org.example.HibernateUtil;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ToDoDAO toDoDAO = new ToDoDAO(); // ✅ Ensure DAO is declared correctly
+        ToDoDAO toDoDAO = new ToDoDAO(); //  Ensure DAO is declared correctly
 
         while (true) {
             System.out.println("\n=== To-Do List Menu ===");
@@ -26,11 +26,11 @@ public class Main {
                 case 1:
                     System.out.print("Enter task: ");
                     String task = scanner.nextLine();
-                    toDoDAO.addToDo(task); // ✅ Fixed
+                    toDoDAO.addToDo(task); //  Fixed
                     System.out.println("Task added successfully.");
                     break;
                 case 2:
-                    List<ToDoItem> tasks = toDoDAO.getAllToDos(); // ✅ Fixed
+                    List<ToDoItem> tasks = toDoDAO.getAllToDos(); //  Fixed
                     if (tasks.isEmpty()) {
                         System.out.println("No tasks found.");
                     } else {
@@ -42,10 +42,10 @@ public class Main {
                     break;
                 case 3:
                     System.out.print("Enter the ID of the task to delete: ");
-                    int id = scanner.nextInt(); // ✅ Declare 'id' properly
+                    int id = scanner.nextInt(); //  Declare 'id' properly
                     scanner.nextLine(); // Clear the buffer
 
-                    toDoDAO.deleteToDo(id); // ✅ Call correctly
+                    toDoDAO.deleteToDo(id); //  Call correctly
 
                     System.out.println("Task deleted successfully.");
                     break;

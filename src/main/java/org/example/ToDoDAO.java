@@ -31,7 +31,7 @@ public class ToDoDAO {
             // Retrieve the task from DB
             ToDoItem item = session.get(ToDoItem.class, id);
             if (item != null) {
-                session.remove(item); // ✅ Fix: Use `session.remove()` instead of `session.delete()`
+                session.remove(item); // Fix: Use `session.remove()` instead of `session.delete()`
                 transaction.commit();
                 System.out.println("Task deleted successfully.");
             } else {
